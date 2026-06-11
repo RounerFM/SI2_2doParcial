@@ -23,7 +23,7 @@ export default function AppScreen({
               left: -64,
               width: 288,
               height: 288,
-              backgroundColor: 'rgba(59, 130, 246, 0.14)',
+              backgroundColor: 'rgba(16, 185, 129, 0.16)',
             }}
           />
           <View
@@ -33,7 +33,7 @@ export default function AppScreen({
               right: -80,
               width: 256,
               height: 256,
-              backgroundColor: 'rgba(37, 99, 235, 0.1)',
+              backgroundColor: 'rgba(5, 150, 105, 0.14)',
             }}
           />
           <View
@@ -43,7 +43,7 @@ export default function AppScreen({
               left: '18%',
               width: 192,
               height: 192,
-              backgroundColor: 'rgba(96, 165, 250, 0.12)',
+              backgroundColor: 'rgba(52, 211, 153, 0.12)',
             }}
           />
         </View>

@@ -94,7 +94,7 @@ export default function IncidentQuotesWorkshops({ incidentId, incidentStatus }) 
   return (
     <View className="mb-4">
       {canSearch && workshops.length === 0 ? (
-        <Card className="p-4 mb-3 bg-slate-50 border-slate-200">
+        <Card className="p-4 mb-3 bg-dark-50 border-slate-200">
           <Text className="text-dark-900 font-bold text-base mb-2">Buscando talleres</Text>
           <Text className="text-dark-600 text-xs leading-5 mb-3">{EMPTY_HINT}</Text>
           <Button

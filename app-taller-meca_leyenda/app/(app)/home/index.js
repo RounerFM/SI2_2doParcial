@@ -196,7 +196,7 @@ export default function HomeScreen() {
   if (locationError || !location) {
     return (
       <AppScreen className="items-center justify-center px-6">
-        <View className="w-20 h-20 rounded-full bg-primary-50 items-center justify-center mb-4">
+        <View className="w-20 h-20 rounded-full bg-dark-100 items-center justify-center mb-4">
           <Ionicons name="location-outline" size={40} color={COLORS.primary} />
         </View>
         <Text className="text-dark-900 font-bold text-xl text-center">
@@ -216,7 +216,7 @@ export default function HomeScreen() {
         <View className="flex-row items-start justify-between">
           <View className="flex-1 min-w-0 pr-3">
             <Text className="text-primary-600 font-semibold text-xs uppercase tracking-widest">
-              Mecanic La Leyenda
+              Mecanica
             </Text>
             <Text className="text-dark-900 font-bold text-2xl tracking-tight mt-0.5">
               Asistencia cerca
@@ -360,7 +360,7 @@ export default function HomeScreen() {
           <Pressable
             onPress={handleSearchWorkshops}
             disabled={fetchingWorkshops}
-            className="flex-row items-center justify-center py-3 rounded-xl active:bg-primary-50"
+            className="flex-row items-center justify-center py-3 rounded-xl active:bg-dark-100"
           >
             <Ionicons name="map-outline" size={18} color={COLORS.primary} />
             <Text className="text-primary-600 font-semibold text-sm ml-2">

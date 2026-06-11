@@ -308,7 +308,7 @@ export default function IncidentStatusScreen() {
 
         <Card className="p-4 mb-4 border-l-4 border-l-primary-500">
           <View className="flex-row items-start">
-            <View className="w-14 h-14 rounded-2xl bg-primary-100 items-center justify-center mr-3">
+            <View className="w-14 h-14 rounded-2xl bg-dark-200 items-center justify-center mr-3">
               <Ionicons name={typeIcon} size={28} color={COLORS.primary} />
             </View>
             <View className="flex-1">

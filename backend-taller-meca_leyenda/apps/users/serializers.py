@@ -77,7 +77,15 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class RegisterClientSerializer(serializers.ModelSerializer):
-    password = serializers.CharField(write_only=True, required=True, validators=[validate_password])
+    password = serializers.CharField(
+        write_only=True,
+        required=True,
+        min_length=6,
+        max_length=128,
+        error_messages={
+            'min_length': 'La contraseña debe tener al menos 6 caracteres.',
+        },
+    )
     password_confirm = serializers.CharField(write_only=True, required=True)
 
     # Client profile fields

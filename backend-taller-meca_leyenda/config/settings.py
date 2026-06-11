@@ -122,6 +122,18 @@ STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+# Angular SPA — WhiteNoise sirve los archivos desde la raíz (sin prefijo /static/)
+WHITENOISE_ROOT = BASE_DIR / 'frontend_dist'
+WHITENOISE_INDEX_FILE = True   # sirve index.html para rutas desconocidas dentro del SPA
+
+# CSRF — dominios confiables para producción (ngrok + local)
+CSRF_TRUSTED_ORIGINS = [
+    'https://repugnant-fanning-pendant.ngrok-free.dev',
+    'http://localhost:8080',
+    'http://localhost:4300',
+    'http://127.0.0.1:8080',
+]
+
 # Media files (uploaded content - LOCAL storage)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'

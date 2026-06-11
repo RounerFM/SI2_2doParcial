@@ -62,7 +62,7 @@ export default function RateServiceScreen() {
 
   if (isError || !assignment || !workshopId) {
     return (
-      <SafeAreaView className="flex-1 bg-white items-center justify-center px-6">
+      <SafeAreaView className="flex-1 bg-dark-100 items-center justify-center px-6">
         <Ionicons name="alert-circle" size={64} color="#ef4444" />
         <Text className="text-dark-900 font-bold text-xl mt-4 text-center">
           No se pudo cargar el servicio
@@ -74,7 +74,7 @@ export default function RateServiceScreen() {
 
   if (alreadyRated) {
     return (
-      <SafeAreaView className="flex-1 bg-white px-6 justify-center">
+      <SafeAreaView className="flex-1 bg-dark-100 px-6 justify-center">
         <Ionicons name="star" size={48} color="#fbbf24" />
         <Text className="text-dark-900 font-bold text-xl mt-4">Ya calificaste este servicio</Text>
         <Button title="Ir al inicio" onPress={() => router.replace('/(app)/home')} variant="primary" className="mt-6" />
@@ -85,7 +85,7 @@ export default function RateServiceScreen() {
   const workshopName = assignment.workshop?.name || 'Taller';
 
   return (
-    <SafeAreaView className="flex-1 bg-white" edges={['bottom']}>
+    <SafeAreaView className="flex-1 bg-dark-100" edges={['bottom']}>
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : undefined}
         className="flex-1"
@@ -119,7 +119,7 @@ export default function RateServiceScreen() {
 
           <Text className="text-dark-700 font-semibold mb-2">Comentario (opcional)</Text>
           <TextInput
-            className="border border-dark-200 rounded-xl p-4 text-dark-900 min-h-[120px] bg-white"
+            className="border border-dark-200 rounded-xl p-4 text-dark-900 min-h-[120px] bg-dark-100"
             multiline
             value={comment}
             onChangeText={setComment}

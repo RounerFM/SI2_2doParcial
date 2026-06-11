@@ -1,0 +1,1 @@
+import{b as a}from"./chunk-DO36KI4F.js";import{aa as e,fa as r}from"./chunk-MWS6LDTZ.js";var o=class t{panel=r(a);userEvent$=this.panel.userEvent$;start(){return this.panel.start()}stop(){this.panel.stop()}static \u0275fac=function(n){return new(n||t)};static \u0275prov=e({token:t,factory:t.\u0275fac,providedIn:"root"})};export{o as a};

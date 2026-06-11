@@ -74,7 +74,7 @@ export class UsersManagementPage implements OnInit {
   roleLabel(role: string | undefined): string {
     const map: Record<string, string> = {
       admin: 'Administrador',
-      workshop_owner: 'Dueño de taller',
+      workshop_owner: 'Propietario',
       client: 'Cliente',
       technician: 'Técnico',
     };

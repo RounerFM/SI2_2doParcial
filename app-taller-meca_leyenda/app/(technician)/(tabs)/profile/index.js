@@ -45,9 +45,9 @@ export default function TechnicianProfileScreen() {
     [user?.first_name, user?.last_name].filter(Boolean).join(' ').trim() || user?.username || 'Técnico';
 
   return (
-    <SafeAreaView className="flex-1 bg-slate-50" edges={['top']}>
+    <SafeAreaView className="flex-1 bg-dark-50" edges={['top']}>
       <ScrollView contentContainerStyle={{ paddingBottom: 32 }}>
-        <View className="items-center py-8 px-4 bg-white border-b border-dark-100">
+        <View className="items-center py-8 px-4 bg-dark-100 border-b border-dark-100">
           <View className="w-24 h-24 rounded-full bg-emerald-600 items-center justify-center mb-4">
             <Ionicons name="construct" size={40} color="#fff" />
           </View>

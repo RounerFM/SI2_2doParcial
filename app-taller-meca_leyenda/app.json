@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Mecanica la leyenda",
+    "name": "Mecanica",
     "slug": "emergencias-meca-leyenda",
     "version": "1.0.5",
     "orientation": "portrait",
@@ -87,18 +87,25 @@
       "expo-font",
       "expo-audio",
       "expo-video",
-      "expo-asset"
+      "expo-asset",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true
+          }
+        }
+      ]
     ],
     "extra": {
       "router": {
         "origin": false
       },
       "apiUrl": "https://ws-taller-meca-leyenda.chambi.shop",
-      "easProjectId": "f59886ef-554f-4721-b283-d328fcf64ac1",
       "eas": {
-        "projectId": "36b1d731-fa7b-4ed9-8728-6b57015a187b"
+        "projectId": "c58a8929-8ef7-4ade-adf2-082cb3533b72"
       }
     },
-    "owner": "rister"
+    "owner": "rouner"
   }
 }

@@ -40,7 +40,7 @@ function serviceLabels(services = []) {
 function WorkshopLogo({ uri, size = 52 }) {
   return (
     <View
-      className="rounded-xl bg-primary-50 items-center justify-center overflow-hidden border border-primary-100"
+      className="rounded-xl bg-dark-100 items-center justify-center overflow-hidden border border-primary-100"
       style={{ width: size, height: size }}
     >
       {uri ? (
@@ -249,7 +249,7 @@ export default function NearbyWorkshopsModal({
             </View>
             <Pressable
               onPress={onClose}
-              className="w-9 h-9 rounded-full items-center justify-center bg-white/80 border border-primary-100"
+              className="w-9 h-9 rounded-full items-center justify-center bg-dark-100/80 border border-primary-100"
               hitSlop={8}
             >
               <Ionicons name="close" size={22} color={COLORS.textLight} />
@@ -268,7 +268,7 @@ export default function NearbyWorkshopsModal({
             />
           ) : workshops.length === 0 ? (
             <View className="py-14 px-6 items-center">
-              <View className="w-16 h-16 rounded-full bg-primary-50 items-center justify-center mb-4">
+              <View className="w-16 h-16 rounded-full bg-dark-100 items-center justify-center mb-4">
                 <Ionicons name="construct-outline" size={32} color={COLORS.primary} />
               </View>
               <Text className="text-dark-900 font-bold text-base text-center">

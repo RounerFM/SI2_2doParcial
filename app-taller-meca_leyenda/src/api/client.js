@@ -5,7 +5,7 @@ import { API_BASE_URL, APP } from '../constants/api';
 const client = axios.create({
   baseURL: API_BASE_URL,
   timeout: 30000,
-  headers: { 'Content-Type': 'application/json' },
+  headers: { 'Content-Type': 'application/json', 'ngrok-skip-browser-warning': 'true' },
 });
 
 // Request interceptor: inyecta JWT

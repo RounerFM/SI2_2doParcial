@@ -1,7 +1,7 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://ws-taller-meca-leyenda.chambi.shop',
-  stripePublishableKey: 'pk_test_51TLFLIFpcH4twgmZNz0sSQHb1OgPuiDb4UO9u9HvKZHCE4FbMUzNmPcIpOBmmWdngQYG1w59t4bt8Gt3plxGOsv600zmotXrY8',
+  apiUrl: '',
+  stripePublishableKey: 'pk_test_51TfrLiHbVxrZorPFjXk8Gp13xyDlvYiDlGPsnbMPqNuRtORRsCbsu7gFrhsLgaKlgAzxUn0oKT7BCsRKxXPvPvus00lTOKlT7W',
   appVersion: '1.0.0',
-  webPushPublicKey: 'BCwQLhoVRNnV8XepRvC-znzdddtGnDzEfbOLUc4kL_ANvKTz8bxBXvfCLuUIazofkkdyuzzdRjeNb-kzz9ncGSE',
+  webPushPublicKey: 'BAFg0wqlRRmLwREPlJFc5qag0nGBWgepfBdVRa3-KEpEFh-Lpd8HwViwtAwqAJ2bE6BYxTLhmNue2nXbEf7evDg',
 };

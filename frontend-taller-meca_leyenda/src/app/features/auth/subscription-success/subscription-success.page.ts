@@ -34,10 +34,7 @@ import { AuthService } from '../../../core/services/auth.service';
           <div class="app-auth-logo">
             <mat-icon aria-hidden="true">build_circle</mat-icon>
           </div>
-          <h1 class="app-auth-brand-name">
-            Mecanic
-            <span>La Leyenda</span>
-          </h1>
+          <h1 class="app-auth-brand-name">Mecanica</h1>
         </header>
 
         <mat-card class="app-auth-card">
@@ -53,7 +50,7 @@ import { AuthService } from '../../../core/services/auth.service';
             } @else if (ok()) {
               <p class="ok">
                 <mat-icon aria-hidden="true">check_circle</mat-icon>
-                ¡Suscripción activada! Ya puedes usar el panel de taller.
+                ¡Suscripción activada! Ya puedes acceder al panel.
               </p>
               <button mat-flat-button color="primary" (click)="goDashboard()">Ir al panel</button>
             } @else {

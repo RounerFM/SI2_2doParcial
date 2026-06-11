@@ -94,8 +94,28 @@ class IncidentViewSet(viewsets.ModelViewSet):
             status=IncidentStatus.PENDING,
             client_request_id=raw_id,
         )
-        # El pipeline IA + motor de asignación se ejecutan tras subir evidencias
-        # (upload_evidence), cuando hay datos para clasificar y ofrecer talleres.
+
+        # ── Motor de asignación ──────────────────────────────────────────────
+        # Se llama SINCRÓNICAMENTE aquí mismo para que los talleres se noten
+        # de inmediato, sin depender de que qcluster esté corriendo.
+        # El pipeline IA (Whisper + TF + GPT) se encola de forma asíncrona
+        # y si hay evidencias lo refinará; pero la asignación base ya está
+        # lista antes de que el cliente suba fotos/audio.
+        try:
+            from apps.assignments.engine import AssignmentEngine
+            from apps.incidents.models import IncidentPriority
+            incident.status = IncidentStatus.WAITING_WORKSHOP
+            incident.priority = incident.priority or IncidentPriority.MEDIUM
+            incident.save(update_fields=['status', 'priority'])
+            AssignmentEngine.find_and_notify_workshops(incident)
+        except Exception as exc:
+            print(f"[perform_create] Error en motor de asignación: {exc}")
+
+        # Encolar pipeline IA asíncrono (refina tipo/prioridad cuando hay evidencias)
+        try:
+            enqueue_incident_pipeline(incident.id)
+        except Exception as exc:
+            print(f"[perform_create] No se pudo encolar pipeline IA: {exc}")
 
     @action(detail=True, methods=['post'], parser_classes=[MultiPartParser, FormParser])
     def upload_evidence(self, request, pk=None):

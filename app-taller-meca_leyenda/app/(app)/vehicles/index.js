@@ -106,7 +106,7 @@ export default function VehiclesScreen() {
           <Loading message="Cargando vehículos..." />
         ) : vehicles.length === 0 ? (
           <View className="items-center justify-center py-12">
-            <View className="w-20 h-20 rounded-full bg-primary-50 items-center justify-center mb-4">
+            <View className="w-20 h-20 rounded-full bg-dark-100 items-center justify-center mb-4">
               <Ionicons name="car-sport-outline" size={40} color={COLORS.primary} />
             </View>
             <Text className="text-dark-700 font-semibold text-base text-center">
@@ -138,7 +138,7 @@ export default function VehiclesScreen() {
                     className="w-14 h-14 rounded-xl bg-dark-100 mr-3"
                   />
                 ) : (
-                  <View className="w-14 h-14 rounded-xl bg-primary-50 items-center justify-center mr-3">
+                  <View className="w-14 h-14 rounded-xl bg-dark-100 items-center justify-center mr-3">
                     <Ionicons name={getVehicleIcon(vehicle.vehicle_type)} size={28} color={COLORS.primary} />
                   </View>
                 )}

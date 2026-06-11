@@ -27,7 +27,7 @@ import { Subscription } from 'rxjs';
   template: `
     <header class="app-page-head app-dashboard-head">
       <h1 class="app-page-title">Dashboard</h1>
-      <p class="app-page-sub">Resumen de tu taller: cola, ingresos y equipo.</p>
+      <p class="app-page-sub">Resumen operativo: cola, ingresos y equipo.</p>
     </header>
     <div class="grid">
       <mat-card class="app-stat-card">

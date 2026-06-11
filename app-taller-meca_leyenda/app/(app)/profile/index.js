@@ -128,7 +128,7 @@ export default function ProfileScreen() {
               onPress={item.onPress}
               className="p-4 mb-2 flex-row items-center"
             >
-              <View className="w-10 h-10 rounded-xl bg-primary-50 items-center justify-center mr-3">
+              <View className="w-10 h-10 rounded-xl bg-dark-100 items-center justify-center mr-3">
                 <Ionicons name={item.icon} size={20} color={COLORS.primary} />
               </View>
               <View className="flex-1">

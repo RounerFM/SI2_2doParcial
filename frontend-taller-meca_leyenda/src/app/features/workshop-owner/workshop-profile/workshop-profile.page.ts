@@ -44,7 +44,7 @@ import { isQueuedResult } from '../../../core/models/offline.model';
     <div class="profile-page">
       <header class="profile-hero">
         <div class="profile-hero-main">
-          <h1 class="app-page-title">Perfil del taller</h1>
+          <h1 class="app-page-title">Perfil del negocio</h1>
           <p class="app-page-sub">
             Datos visibles para clientes y administración: contacto, servicios, logo y ubicación.
           </p>

@@ -40,7 +40,7 @@ export default function Badge({
   return (
     <View
       className={`
-        flex-row items-center rounded-full self-start
+        flex-row items-center rounded-none self-start
         ${sizeStyles[size]}
         ${className}
       `}

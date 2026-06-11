@@ -15,13 +15,13 @@ export default function Button({
   full = false,
   className = '',
 }) {
-  const baseStyle = 'rounded-xl flex-row items-center justify-center';
+  const baseStyle = 'rounded-none flex-row items-center justify-center';
 
   const variantStyles = {
     primary: 'bg-primary-600 active:bg-primary-700',
-    secondary: 'bg-dark-600 active:bg-dark-700',
-    outline: 'border-2 border-primary-600 bg-white/70 active:bg-primary-50',
-    ghost: 'bg-transparent active:bg-white/60',
+    secondary: 'bg-dark-200 active:bg-dark-100',
+    outline: 'border-2 border-primary-600 bg-dark-100/70 active:bg-dark-100',
+    ghost: 'bg-transparent active:bg-dark-100/60',
     danger: 'bg-red-600 active:bg-red-700',
   };
 

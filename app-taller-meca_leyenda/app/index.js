@@ -9,14 +9,14 @@ export default function Index() {
 
   if (isLoading) {
     return (
-      <View className="flex-1 bg-dark-900 items-center justify-center">
+      <View className="flex-1 bg-dark-50 items-center justify-center">
         <Image
           source={require('../assets/icon.png')}
           style={{ width: 120, height: 120, marginBottom: 20 }}
           resizeMode="contain"
         />
         <Text className="text-white text-xl font-bold mb-4">
-          Mecanica la leyenda
+          Mecanica
         </Text>
         <Loading message="Cargando..." fullScreen={false} />
       </View>

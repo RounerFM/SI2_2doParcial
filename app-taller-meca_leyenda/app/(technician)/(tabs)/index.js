@@ -44,8 +44,8 @@ export default function TechnicianHomeScreen() {
   };
 
   return (
-    <SafeAreaView className="flex-1 bg-slate-50" edges={['top']}>
-      <View className="px-4 py-3 bg-white border-b border-dark-100">
+    <SafeAreaView className="flex-1 bg-dark-50" edges={['top']}>
+      <View className="px-4 py-3 bg-dark-100 border-b border-dark-100">
         <Text className="text-dark-900 font-bold text-xl mb-3">Órdenes asignadas</Text>
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
           <View className="flex-row gap-2">

@@ -41,4 +41,4 @@ const rawScheme = Constants.expoConfig?.scheme;
 export const APP_URL_SCHEME =
   typeof rawScheme === 'string' ? rawScheme : 'emergenciasveh';
 
-export const STRIPE_PUBLISHABLE_KEY = 'pk_test_51TLFLIFpcH4twgmZNz0sSQHb1OgPuiDb4UO9u9HvKZHCE4FbMUzNmPcIpOBmmWdngQYG1w59t4bt8Gt3plxGOsv600zmotXrY8';
+export const STRIPE_PUBLISHABLE_KEY = 'pk_test_51TfrLiHbVxrZorPFjXk8Gp13xyDlvYiDlGPsnbMPqNuRtORRsCbsu7gFrhsLgaKlgAzxUn0oKT7BCsRKxXPvPvus00lTOKlT7W';

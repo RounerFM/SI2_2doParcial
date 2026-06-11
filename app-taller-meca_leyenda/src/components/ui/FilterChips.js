@@ -7,7 +7,8 @@ export default function FilterChips({ options, value, onChange, className = '' }
       horizontal
       showsHorizontalScrollIndicator={false}
       className={className}
-      contentContainerStyle={{ paddingHorizontal: 16, gap: 8 }}
+      style={{ flexGrow: 0, flexShrink: 0 }}
+      contentContainerStyle={{ paddingHorizontal: 16, gap: 8, alignItems: 'center' }}
     >
       {options.map((opt) => {
         const active = value === opt.value;
@@ -15,8 +16,8 @@ export default function FilterChips({ options, value, onChange, className = '' }
           <Pressable
             key={opt.value}
             onPress={() => onChange(opt.value)}
-            className={`px-4 py-2 rounded-full border ${
-              active ? 'bg-primary-600 border-primary-600' : 'bg-white/80 border-primary-200'
+            className={`px-4 py-2 rounded-none border ${
+              active ? 'bg-primary-600 border-primary-600' : 'bg-dark-100/80 border-primary-200'
             }`}
           >
             <Text

@@ -35,22 +35,19 @@ import { MessagesService } from '../../../core/services/messages.service';
         <span class="app-auth-orb app-auth-orb--3"></span>
       </div>
 
-      <div class="app-auth-shell">
+      <div class="app-auth-shell app-auth-split">
         <header class="app-auth-brand">
           <div class="app-auth-logo">
             <mat-icon aria-hidden="true">build_circle</mat-icon>
           </div>
-          <h1 class="app-auth-brand-name">
-            Mecanic
-            <span>La Leyenda</span>
-          </h1>
-          <p class="app-auth-brand-tag">Panel de talleres</p>
+          <h1 class="app-auth-brand-name">Mecanica</h1>
+          <p class="app-auth-brand-tag">Plataforma de gestión</p>
         </header>
 
         <mat-card class="app-auth-card">
           <mat-card-header>
             <mat-card-title>Iniciar sesión</mat-card-title>
-            <span class="auth-card-sub">Accede con tu cuenta de dueño de taller</span>
+            <span class="auth-card-sub">Accede con tu cuenta</span>
           </mat-card-header>
           <mat-card-content>
             <form [formGroup]="form" (ngSubmit)="submit()">
@@ -92,7 +89,7 @@ import { MessagesService } from '../../../core/services/messages.service';
             </form>
 
             <p class="auth-footer">
-              ¿Dueño de taller nuevo?
+              ¿No tienes cuenta?
               <a routerLink="/auth/register">Crear cuenta</a>
             </p>
           </mat-card-content>

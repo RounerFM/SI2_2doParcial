@@ -125,7 +125,7 @@ export default function VehicleDetailScreen() {
               resizeMode="cover"
             />
           ) : (
-            <View className="w-32 h-32 rounded-full bg-primary-100 items-center justify-center">
+            <View className="w-32 h-32 rounded-full bg-dark-200 items-center justify-center">
               <Ionicons name={getVehicleIcon(vehicle.vehicle_type)} size={64} color={COLORS.primary} />
             </View>
           )}

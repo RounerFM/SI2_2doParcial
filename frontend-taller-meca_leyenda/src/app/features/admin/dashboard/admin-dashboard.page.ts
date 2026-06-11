@@ -471,8 +471,8 @@ const CHART_COLORS = ['#2563eb', '#3b82f6', '#60a5fa', '#f59e0b', '#8b5cf6', '#6
     }
 
     .hero-kpi--primary {
-      border-color: rgb(37 99 235 / 22%) !important;
-      background: linear-gradient(145deg, rgb(255 255 255 / 82%), rgb(219 234 254 / 45%)) !important;
+      border-color: rgb(16 185 129 / 38%) !important;
+      background: linear-gradient(145deg, rgb(16 185 129 / 16%), rgb(16 185 129 / 5%)) !important;
     }
 
     .hero-kpi--primary .hero-kpi-top .mat-icon {

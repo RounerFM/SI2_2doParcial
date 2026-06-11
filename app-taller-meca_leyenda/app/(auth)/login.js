@@ -88,7 +88,7 @@ export default function LoginScreen() {
                 />
               </View>
               <Text className="text-primary-600 font-semibold text-xs uppercase tracking-widest">
-                Mecanic La Leyenda
+                Mecanica
               </Text>
               <Text className="text-dark-900 font-bold text-3xl tracking-tight mt-1">
                 Bienvenido
@@ -101,7 +101,7 @@ export default function LoginScreen() {
             {/* Formulario */}
             <Card className="p-5 mb-5">
               <View className="flex-row items-center mb-4">
-                <View className="w-10 h-10 rounded-xl bg-primary-50 items-center justify-center mr-3">
+                <View className="w-10 h-10 rounded-xl bg-dark-100 items-center justify-center mr-3">
                   <Ionicons name="log-in-outline" size={22} color={COLORS.primary} />
                 </View>
                 <View className="flex-1">

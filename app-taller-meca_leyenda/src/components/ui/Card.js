@@ -11,22 +11,22 @@ export default function Card({ children, className = '', onPress, variant = 'gla
       ? {
           backgroundColor: GLASS.background,
           borderColor: GLASS.border,
-          shadowColor: '#2563eb',
-          shadowOffset: { width: 0, height: 4 },
-          shadowOpacity: 0.08,
-          shadowRadius: 12,
-          elevation: 2,
+          shadowColor: '#10b981',
+          shadowOffset: { width: 0, height: 6 },
+          shadowOpacity: 0.18,
+          shadowRadius: 16,
+          elevation: 3,
         }
       : {
-          backgroundColor: '#ffffff',
-          borderColor: '#e2e8f0',
+          backgroundColor: '#111a2b',
+          borderColor: '#1f2a3d',
         };
 
   return (
     <Component
       onPress={onPress}
       activeOpacity={activeOpacity}
-      className={`rounded-2xl border ${className}`}
+      className={`rounded-none border ${className}`}
       style={glassStyle}
       {...props}
     >

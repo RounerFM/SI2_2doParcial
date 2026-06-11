@@ -70,8 +70,8 @@ function StepProgress({ current = 2 }) {
                   active
                     ? 'border-primary-600 bg-primary-600'
                     : done
-                      ? 'border-primary-400 bg-primary-100'
-                      : 'border-primary-200 bg-white/80'
+                      ? 'border-primary-400 bg-dark-200'
+                      : 'border-primary-200 bg-dark-100/80'
                 }`}
               >
                 <Text
@@ -103,14 +103,14 @@ function StepProgress({ current = 2 }) {
 function SectionTitle({ icon, title, subtitle, badge }) {
   return (
     <View className="flex-row items-start mb-3">
-      <View className="w-9 h-9 rounded-xl bg-primary-50 items-center justify-center mr-2.5 mt-0.5">
+      <View className="w-9 h-9 rounded-xl bg-dark-100 items-center justify-center mr-2.5 mt-0.5">
         <Ionicons name={icon} size={18} color={COLORS.primary} />
       </View>
       <View className="flex-1 min-w-0">
         <View className="flex-row items-center flex-wrap gap-2">
           <Text className="text-dark-900 font-bold text-base">{title}</Text>
           {badge != null ? (
-            <View className="px-2 py-0.5 rounded-full bg-primary-100 border border-primary-200">
+            <View className="px-2 py-0.5 rounded-full bg-dark-200 border border-primary-200">
               <Text className="text-primary-700 text-[10px] font-bold">{badge}</Text>
             </View>
           ) : null}
@@ -388,7 +388,7 @@ export default function EvidenceScreen() {
       <ScrollView contentContainerStyle={{ padding: 16, paddingBottom: 24 }} keyboardShouldPersistTaps="handled">
         <View className="mb-4">
           <Text className="text-primary-600 font-semibold text-xs uppercase tracking-widest">
-            Mecanic La Leyenda
+            Mecanica
           </Text>
           <Text className="text-dark-900 font-bold text-2xl tracking-tight mt-0.5">
             Agregar evidencias
@@ -428,7 +428,7 @@ export default function EvidenceScreen() {
               className="items-center rounded-2xl border-2 border-dashed border-primary-200 px-4 py-8 mb-3"
               style={{ backgroundColor: 'rgba(239,246,255,0.45)' }}
             >
-              <View className="w-14 h-14 rounded-2xl bg-primary-50 items-center justify-center mb-3">
+              <View className="w-14 h-14 rounded-2xl bg-dark-100 items-center justify-center mb-3">
                 <Ionicons name="image-outline" size={28} color={COLORS.primary} />
               </View>
               <Text className="text-dark-700 font-semibold text-sm text-center">Aún no hay fotos</Text>

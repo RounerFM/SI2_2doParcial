@@ -42,7 +42,7 @@ function StepProgress({ current = 1 }) {
             <View className="flex-1 items-center min-w-0">
               <View
                 className={`w-8 h-8 rounded-full items-center justify-center border-2 ${
-                  active ? 'border-primary-600 bg-primary-600' : done ? 'border-primary-400 bg-primary-100' : 'border-primary-200 bg-white/80'
+                  active ? 'border-primary-600 bg-primary-600' : done ? 'border-primary-400 bg-dark-200' : 'border-primary-200 bg-dark-100/80'
                 }`}
               >
                 <Text
@@ -74,7 +74,7 @@ function StepProgress({ current = 1 }) {
 function SectionTitle({ icon, title, subtitle }) {
   return (
     <View className="flex-row items-start mb-3">
-      <View className="w-9 h-9 rounded-xl bg-primary-50 items-center justify-center mr-2.5 mt-0.5">
+      <View className="w-9 h-9 rounded-xl bg-dark-100 items-center justify-center mr-2.5 mt-0.5">
         <Ionicons name={icon} size={18} color={COLORS.primary} />
       </View>
       <View className="flex-1 min-w-0">
@@ -88,14 +88,14 @@ function SectionTitle({ icon, title, subtitle }) {
 function LocationStatusBadge({ manualLocation, loadingLocation, locationError, location, draftCoords }) {
   if (manualLocation) {
     return (
-      <View className="self-start px-2.5 py-1 rounded-full bg-primary-100 border border-primary-200 mb-2">
+      <View className="self-start px-2.5 py-1 rounded-full bg-dark-200 border border-primary-200 mb-2">
         <Text className="text-primary-700 text-[10px] font-bold uppercase tracking-wide">Mapa manual</Text>
       </View>
     );
   }
   if (loadingLocation) {
     return (
-      <View className="self-start px-2.5 py-1 rounded-full bg-slate-100 border border-slate-200 mb-2">
+      <View className="self-start px-2.5 py-1 rounded-full bg-dark-100 border border-slate-200 mb-2">
         <Text className="text-dark-500 text-[10px] font-bold uppercase tracking-wide">Obteniendo GPS…</Text>
       </View>
     );
@@ -361,7 +361,7 @@ export default function EmergencyStartScreen() {
         {/* Header */}
         <View className="mb-4">
           <Text className="text-primary-600 font-semibold text-xs uppercase tracking-widest">
-            Mecanic La Leyenda
+            Mecanica
           </Text>
           <Text className="text-dark-900 font-bold text-2xl tracking-tight mt-0.5">
             Reportar emergencia
@@ -523,7 +523,7 @@ export default function EmergencyStartScreen() {
 
           <Pressable
             onPress={() => router.push('/vehicles/add')}
-            className="flex-row items-center justify-center py-2.5 rounded-xl active:bg-primary-50"
+            className="flex-row items-center justify-center py-2.5 rounded-xl active:bg-dark-100"
           >
             <Ionicons name="add-circle-outline" size={18} color={COLORS.primary} />
             <Text className="text-primary-600 font-semibold text-sm ml-2">Agregar otro vehículo</Text>

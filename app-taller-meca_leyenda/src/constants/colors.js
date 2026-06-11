@@ -1,29 +1,29 @@
-/** Tokens alineados con la web (blanco + azul). */
+/** Tokens dark mode (slate profundo + esmeralda neón). */
 export const COLORS = {
-  primary: '#2563eb',
-  primaryDark: '#1d4ed8',
-  primaryLight: '#60a5fa',
+  primary: '#10b981',
+  primaryDark: '#059669',
+  primaryLight: '#34d399',
 
-  secondary: '#3b82f6',
-  secondaryDark: '#2563eb',
+  secondary: '#34d399',
+  secondaryDark: '#10b981',
 
   success: '#10b981',
   warning: '#f59e0b',
   error: '#ef4444',
-  info: '#2563eb',
+  info: '#10b981',
 
-  background: '#f0f7ff',
-  backgroundElevated: '#f8fafc',
-  surface: 'rgba(255, 255, 255, 0.82)',
-  surfaceSolid: '#ffffff',
-  surfaceDark: '#1e293b',
+  background: '#070b14',
+  backgroundElevated: '#0e1626',
+  surface: 'rgba(255, 255, 255, 0.05)',
+  surfaceSolid: '#111a2b',
+  surfaceDark: '#0e1626',
 
-  text: '#0f172a',
-  textLight: '#64748b',
+  text: '#e6edf6',
+  textLight: '#8b98ad',
   textDark: '#f8fafc',
 
-  border: 'rgba(37, 99, 235, 0.12)',
-  borderSolid: '#e2e8f0',
+  border: 'rgba(255, 255, 255, 0.10)',
+  borderSolid: '#1f2a3d',
   borderDark: '#334155',
 
   white: '#ffffff',
@@ -31,18 +31,18 @@ export const COLORS = {
 
   // Status colors
   pending: '#f59e0b',
-  analyzing: '#3b82f6',
-  waiting: '#8b5cf6',
-  assigned: '#06b6d4',
+  analyzing: '#38bdf8',
+  waiting: '#a78bfa',
+  assigned: '#22d3ee',
   inProgress: '#10b981',
   completed: '#10b981',
-  cancelled: '#6b7280',
+  cancelled: '#94a3b8',
 
   // Priority colors
   low: '#10b981',
   medium: '#f59e0b',
   high: '#ef4444',
-  critical: '#7f1d1d',
+  critical: '#f87171',
 };
 
 export const STATUS_COLORS = {
@@ -63,7 +63,7 @@ export const PRIORITY_COLORS = {
 };
 
 export const GLASS = {
-  background: 'rgba(255, 255, 255, 0.82)',
-  border: 'rgba(37, 99, 235, 0.12)',
-  tabBar: 'rgba(255, 255, 255, 0.92)',
+  background: 'rgba(17, 26, 43, 0.72)',
+  border: 'rgba(255, 255, 255, 0.10)',
+  tabBar: 'rgba(13, 20, 34, 0.94)',
 };

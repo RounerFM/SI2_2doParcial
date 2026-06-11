@@ -3,6 +3,13 @@
     "version": ">= 5.4.0"
   },
   "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      }
+    },
     "preview": {
       "android": {
         "buildType": "apk"
@@ -14,8 +21,12 @@
       }
     },
     "production": {
+      "distribution": "internal",
       "android": {
         "buildType": "apk"
+      },
+      "env": {
+        "EXPO_PUBLIC_API_URL": "https://repugnant-fanning-pendant.ngrok-free.dev"
       }
     }
   },

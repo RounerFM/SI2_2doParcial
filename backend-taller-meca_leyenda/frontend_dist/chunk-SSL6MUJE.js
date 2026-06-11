@@ -1,0 +1,1 @@
+function e(t){if(Array.isArray(t))return{results:t,count:t.length};let n=t;return!n||typeof n!="object"?{results:[],count:0}:{results:Array.isArray(n.results)?n.results:[],count:typeof n.count=="number"?n.count:0}}export{e as a};

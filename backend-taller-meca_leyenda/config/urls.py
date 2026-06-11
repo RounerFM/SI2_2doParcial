@@ -1,9 +1,19 @@
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, re_path
 from django.conf import settings
 from django.conf.urls.static import static
+from django.http import FileResponse, Http404
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 import django_eventstream
+import os
+
+
+def angular_spa(request, path=''):
+    """Sirve index.html para cualquier ruta no reconocida → Angular Router."""
+    index_path = os.path.join(settings.WHITENOISE_ROOT, 'index.html')
+    if not os.path.exists(index_path):
+        raise Http404('Frontend no encontrado. Ejecuta ng build primero.')
+    return FileResponse(open(index_path, 'rb'), content_type='text/html')
 
 # Importar patrones de URLs de las apps
 from apps.users.urls import app_patterns as users_app_patterns, web_patterns as users_web_patterns, admin_patterns as users_admin_patterns
@@ -18,7 +28,7 @@ from apps.assignments.urls import app_patterns as assignments_app_patterns
 from apps.assignments.technician_urls import technician_app_patterns
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('dj-admin/', admin.site.urls),  # movido para liberar /admin/ a Angular
 
     # API Documentation (OpenAPI/Swagger)
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
@@ -97,3 +107,9 @@ urlpatterns = [
 # Servir archivos media en desarrollo
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+# Catch-all: cualquier ruta que no sea /api/, /admin/, /media/ → Angular SPA
+# DEBE ir al final para no interceptar rutas del backend
+urlpatterns += [
+    re_path(r'^(?!api/|dj-admin/|media/|static/).*$', angular_spa, name='angular-spa'),
+]

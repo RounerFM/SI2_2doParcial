@@ -153,7 +153,7 @@ export default function PaymentScreen() {
 
   if (!assignment) {
     return (
-      <SafeAreaView className="flex-1 bg-white items-center justify-center px-6">
+      <SafeAreaView className="flex-1 bg-dark-100 items-center justify-center px-6">
         <Ionicons name="alert-circle" size={64} color="#ef4444" />
         <Text className="text-dark-900 font-bold text-xl mt-4 text-center">
           Servicio no encontrado
@@ -174,7 +174,7 @@ export default function PaymentScreen() {
   const finalAmount = totalAmount;
 
   return (
-    <SafeAreaView className="flex-1 bg-white" edges={['bottom']}>
+    <SafeAreaView className="flex-1 bg-dark-100" edges={['bottom']}>
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
         style={{ flex: 1 }}
@@ -196,7 +196,7 @@ export default function PaymentScreen() {
         {assignment.workshop && (
           <Card className="p-4 mb-4">
             <View className="flex-row items-center mb-3">
-              <View className="w-12 h-12 rounded-full bg-primary-100 items-center justify-center mr-3">
+              <View className="w-12 h-12 rounded-full bg-dark-200 items-center justify-center mr-3">
                 <Ionicons name="construct" size={24} color="#ef4444" />
               </View>
               <View className="flex-1">
@@ -246,7 +246,7 @@ export default function PaymentScreen() {
             Información de la tarjeta
           </Text>
 
-          <Card className="p-4 mb-4 bg-white">
+          <Card className="p-4 mb-4 bg-dark-100">
             <View style={{ minHeight: 65 }}>
               <CardField
                 postalCodeEnabled={true}

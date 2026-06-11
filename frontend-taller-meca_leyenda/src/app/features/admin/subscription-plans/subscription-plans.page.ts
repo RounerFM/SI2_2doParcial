@@ -36,7 +36,7 @@ import { OfflineCacheService } from '../../../core/services/offline-cache.servic
   template: `
     <header class="app-page-head">
       <h1 class="app-page-title">Planes de suscripción</h1>
-      <p class="app-page-sub">Define los planes que los talleres eligen al registrarse. Se sincronizan con Stripe.</p>
+      <p class="app-page-sub">Define los planes de suscripción disponibles. Se sincronizan con Stripe.</p>
     </header>
 
     <mat-card class="app-surface-card mb">

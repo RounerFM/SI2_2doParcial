@@ -11,7 +11,7 @@ export default function IncidentCard({ incident, onPress }) {
     <Card onPress={onPress} className="p-4 mb-3">
       <View className="flex-row items-start justify-between mb-2">
         <View className="flex-row items-center flex-1">
-          <View className="w-10 h-10 rounded-full bg-primary-100 items-center justify-center mr-3">
+          <View className="w-10 h-10 rounded-full bg-dark-200 items-center justify-center mr-3">
             <Ionicons name={getIncidentTypeIcon(incident.incident_type)} size={20} color={COLORS.primary} />
           </View>
           <View className="flex-1">

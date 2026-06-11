@@ -199,7 +199,7 @@ export default function TechnicianAssignmentScreen() {
 
   if (!assignmentId) {
     return (
-      <SafeAreaView className="flex-1 bg-white items-center justify-center">
+      <SafeAreaView className="flex-1 bg-dark-100 items-center justify-center">
         <Text className="text-dark-600">Orden inválida</Text>
       </SafeAreaView>
     );
@@ -211,7 +211,7 @@ export default function TechnicianAssignmentScreen() {
 
   if (isError) {
     return (
-      <SafeAreaView className="flex-1 bg-white items-center justify-center px-6">
+      <SafeAreaView className="flex-1 bg-dark-100 items-center justify-center px-6">
         <Text className="text-dark-800 text-center">No se pudo cargar la orden.</Text>
         <Button title="Volver" onPress={() => router.back()} className="mt-4" />
       </SafeAreaView>
@@ -223,8 +223,8 @@ export default function TechnicianAssignmentScreen() {
   const allStepsDone = row.status === 'completed';
 
   return (
-    <SafeAreaView className="flex-1 bg-slate-100" edges={['top']}>
-      <View className="flex-row items-center px-2 py-3 bg-white border-b border-slate-200 shadow-sm">
+    <SafeAreaView className="flex-1 bg-dark-100" edges={['top']}>
+      <View className="flex-row items-center px-2 py-3 bg-dark-100 border-b border-slate-200 shadow-sm">
         <Button title="←" variant="ghost" size="sm" onPress={() => router.back()} />
         <View className="flex-1 items-center pr-8">
           <Text className="text-dark-500 text-xs font-medium uppercase tracking-wide">Orden activa</Text>
@@ -241,7 +241,7 @@ export default function TechnicianAssignmentScreen() {
         nestedScrollEnabled
       >
         {clientLat != null && clientLng != null ? (
-          <View className="bg-white mb-3">
+          <View className="bg-dark-100 mb-3">
             <View className="px-4 pt-4 pb-2">
               <Text className="text-dark-900 font-bold text-lg">Ruta hacia el cliente</Text>
               <Text className="text-dark-600 text-sm mt-1 leading-5">
@@ -278,7 +278,7 @@ export default function TechnicianAssignmentScreen() {
               destinationTitle="Cliente / incidente"
               originTitle={usingWorkshopOrigin ? 'Taller (aprox.)' : 'Tú (GPS)'}
             />
-            <Text className="text-dark-400 text-[11px] px-4 py-2 bg-slate-50 leading-4">
+            <Text className="text-dark-400 text-[11px] px-4 py-2 bg-dark-50 leading-4">
               Rojo: incidente ({clientLat?.toFixed(5)}, {clientLng?.toFixed(5)}). Verde:{' '}
               {routeOrigin
                 ? `${usingWorkshopOrigin ? 'taller' : 'tu posición'} (${routeOrigin.lat.toFixed(
@@ -307,7 +307,7 @@ export default function TechnicianAssignmentScreen() {
                 <View key={s.key} className="items-center flex-1 max-w-[25%]">
                   <View
                     className={`w-10 h-10 rounded-full items-center justify-center ${
-                      done || current ? 'bg-emerald-500' : 'bg-slate-200'
+                      done || current ? 'bg-emerald-500' : 'bg-dark-200'
                     }`}
                   >
                     <Ionicons
@@ -331,7 +331,7 @@ export default function TechnicianAssignmentScreen() {
         </View>
 
         <View className="px-4">
-          <Card className="p-4 mb-3 bg-white border border-slate-100">
+          <Card className="p-4 mb-3 bg-dark-100 border border-slate-100">
             <Text className="text-dark-500 text-xs font-semibold mb-1">Estado</Text>
             <Text className="text-emerald-800 font-bold text-xl">{getAssignmentStatusLabel(row.status)}</Text>
             <Text className="text-dark-600 text-sm mt-2 leading-5">
@@ -347,7 +347,7 @@ export default function TechnicianAssignmentScreen() {
             ) : null}
           </Card>
 
-          <Card className="p-4 mb-3 bg-white border border-slate-100">
+          <Card className="p-4 mb-3 bg-dark-100 border border-slate-100">
             <Text className="text-dark-900 font-bold text-base mb-2">Incidente</Text>
             <Text className="text-dark-700 text-sm mb-1">Tipo: {getIncidentTypeLabel(typeKey)}</Text>
             {incident?.address_text ? (
@@ -373,7 +373,7 @@ export default function TechnicianAssignmentScreen() {
           </Card>
 
           {row.workshop ? (
-            <Card className="p-4 mb-3 bg-white border border-slate-100">
+            <Card className="p-4 mb-3 bg-dark-100 border border-slate-100">
               <Text className="text-dark-900 font-bold text-base mb-1">{row.workshop.name}</Text>
               <Text className="text-dark-600 text-sm">{row.workshop.phone}</Text>
             </Card>
@@ -397,7 +397,7 @@ export default function TechnicianAssignmentScreen() {
               icon="navigate"
             />
           ) : (
-            <Card className="p-4 bg-slate-200/60 border border-slate-200">
+            <Card className="p-4 bg-dark-200/60 border border-slate-200">
               <Text className="text-dark-700 text-sm leading-5">
                 {row.status === 'completed'
                   ? 'Servicio cerrado por el taller. Costo y pago los gestiona el dueño desde el portal web.'

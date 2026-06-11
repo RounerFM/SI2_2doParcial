@@ -67,7 +67,7 @@ export default function RequestsScreen() {
           <Loading message="Cargando solicitudes..." />
         ) : incidents.length === 0 ? (
           <View className="items-center justify-center py-12">
-            <View className="w-20 h-20 rounded-full bg-primary-50 items-center justify-center mb-4">
+            <View className="w-20 h-20 rounded-full bg-dark-100 items-center justify-center mb-4">
               <Ionicons name="document-text-outline" size={40} color={COLORS.primary} />
             </View>
             <Text className="text-dark-700 font-semibold text-base text-center">

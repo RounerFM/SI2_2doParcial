@@ -45,15 +45,12 @@ import { CurrencyPipe } from '@angular/common';
           <div class="app-auth-logo">
             <mat-icon aria-hidden="true">build_circle</mat-icon>
           </div>
-          <h1 class="app-auth-brand-name">
-            Mecanic
-            <span>La Leyenda</span>
-          </h1>
-          <p class="app-auth-brand-tag">Registro de dueño de taller</p>
+          <h1 class="app-auth-brand-name">Mecanica</h1>
+          <p class="app-auth-brand-tag">Crea tu cuenta</p>
         </header>
 
         <form [formGroup]="form" (ngSubmit)="submit()">
-          <div class="app-auth-grid">
+          <div class="app-auth-grid app-auth-grid--reverse">
             <mat-card class="app-auth-card">
               <mat-card-header>
                 <mat-card-title>Crear cuenta</mat-card-title>
@@ -130,7 +127,7 @@ import { CurrencyPipe } from '@angular/common';
                   <mat-icon aria-hidden="true">payments</mat-icon>
                   Plan de suscripción
                 </mat-card-title>
-                <span class="auth-card-sub">Elige el plan de tu taller. Pago seguro con Stripe.</span>
+                <span class="auth-card-sub">Elige tu plan. Pago seguro con Stripe.</span>
               </mat-card-header>
               <mat-card-content>
                 @if (plans().length === 0) {
@@ -150,7 +147,7 @@ import { CurrencyPipe } from '@angular/common';
                               p.price_amount | currency : 'USD' : 'symbol' : '1.2-2'
                             }}/{{ intervalLabel(p) }}</span>
                           </div>
-                          <p class="plan-desc">{{ p.description || 'Acceso al panel de taller' }}</p>
+                          <p class="plan-desc">{{ p.description || 'Acceso al panel' }}</p>
                         </div>
                       </label>
                     }

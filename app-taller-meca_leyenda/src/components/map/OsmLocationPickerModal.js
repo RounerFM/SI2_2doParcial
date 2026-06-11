@@ -111,8 +111,8 @@ export default function OsmLocationPickerModal({
           ]}
         >
           <View className="px-4 pt-3 pb-2 border-b border-slate-200">
-            <Text className="text-slate-900 font-bold text-lg">Ubicación en el mapa</Text>
-            <Text className="text-slate-600 text-sm mt-1">
+            <Text className="text-dark-900 font-bold text-lg">Ubicación en el mapa</Text>
+            <Text className="text-dark-500 text-sm mt-1">
               OpenStreetMap — toca donde estés o arrastra el pin
             </Text>
           </View>
@@ -140,7 +140,7 @@ export default function OsmLocationPickerModal({
           </View>
 
           {draft && (
-            <Text className="text-slate-600 text-xs px-4 py-2 text-center">
+            <Text className="text-dark-500 text-xs px-4 py-2 text-center">
               {draft.latitude.toFixed(6)}, {draft.longitude.toFixed(6)}
             </Text>
           )}
@@ -148,9 +148,9 @@ export default function OsmLocationPickerModal({
           <View className="flex-row gap-3 px-4 pt-2">
             <Pressable
               onPress={onClose}
-              className="flex-1 py-3 rounded-xl bg-slate-200 items-center active:opacity-80"
+              className="flex-1 py-3 rounded-xl bg-dark-200 items-center active:opacity-80"
             >
-              <Text className="text-slate-800 font-semibold">Cancelar</Text>
+              <Text className="text-dark-800 font-semibold">Cancelar</Text>
             </Pressable>
             <Pressable
               onPress={() => {
@@ -160,7 +160,7 @@ export default function OsmLocationPickerModal({
                 }
               }}
               disabled={!draft}
-              className={`flex-1 py-3 rounded-xl items-center ${draft ? 'bg-red-600 active:opacity-90' : 'bg-slate-300'}`}
+              className={`flex-1 py-3 rounded-xl items-center ${draft ? 'bg-red-600 active:opacity-90' : 'bg-dark-200'}`}
             >
               <Text className="text-white font-semibold">Usar esta ubicación</Text>
             </Pressable>

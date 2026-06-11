@@ -20,7 +20,7 @@ import { COLORS } from '../../src/constants/colors';
 function SectionTitle({ icon, title, subtitle }) {
   return (
     <View className="flex-row items-start mb-4">
-      <View className="w-9 h-9 rounded-xl bg-primary-50 items-center justify-center mr-2.5">
+      <View className="w-9 h-9 rounded-xl bg-dark-100 items-center justify-center mr-2.5">
         <Ionicons name={icon} size={18} color={COLORS.primary} />
       </View>
       <View className="flex-1 min-w-0">
@@ -136,7 +136,7 @@ export default function RegisterScreen() {
             </Pressable>
 
             <Text className="text-primary-600 font-semibold text-xs uppercase tracking-widest">
-              Mecanic La Leyenda
+              Mecanica
             </Text>
             <Text className="text-dark-900 font-bold text-2xl tracking-tight mt-0.5">
               Crear cuenta

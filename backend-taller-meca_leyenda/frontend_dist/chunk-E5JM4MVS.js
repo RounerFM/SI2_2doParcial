@@ -1,0 +1,1 @@
+import{sb as t}from"./chunk-MWS6LDTZ.js";var e=class n{transform(r){if(r==null||r==="")return"Bs. 0,00";let i=Number(r);return Number.isNaN(i)?String(r):"Bs. "+i.toLocaleString("es-BO",{minimumFractionDigits:2,maximumFractionDigits:2})}static \u0275fac=function(i){return new(i||n)};static \u0275pipe=t({name:"currencyBo",type:n,pure:!0})};export{e as a};

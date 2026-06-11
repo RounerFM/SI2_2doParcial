@@ -137,7 +137,7 @@ export default function ClientLiveTrackingBlock({
       : 'Esperando posición del técnico…';
 
   return (
-    <Card className="p-0 mb-4 overflow-hidden border border-emerald-100 bg-white">
+    <Card className="p-0 mb-4 overflow-hidden border border-emerald-100 bg-dark-100">
       <View className="px-4 pt-4 pb-2 flex-row items-center justify-between">
         <View className="flex-row items-center flex-1 pr-2">
           <View className="w-10 h-10 rounded-full bg-emerald-100 items-center justify-center mr-3">
@@ -175,7 +175,7 @@ export default function ClientLiveTrackingBlock({
         destinationTitle="Tu ubicación (reporte)"
         originTitle={techName}
       />
-      <Text className="text-dark-400 text-[11px] px-4 py-3 bg-slate-50 leading-4">
+      <Text className="text-dark-400 text-[11px] px-4 py-3 bg-dark-50 leading-4">
         Rojo: tu reporte ({lat.toFixed(5)}, {lng.toFixed(5)}). Verde: técnico
         {techLat != null && techLng != null
           ? ` (${Number(techLat).toFixed(5)}, ${Number(techLng).toFixed(5)}).`
